@@ -1,6 +1,6 @@
-import bubbleBening from '../assets/bubble-wrap-bening125cm.webp';
-import bubbleHitam from '../assets/bubble-wrap-hitam125cm.webp';
-import bubbleAntiStatic from '../assets/bubble-wrap-anti-static125cm.webp';
+const bubbleBening = "/bubble-wrap-bening125cm.webp";
+const bubbleHitam = "/bubble-wrap-hitam125cm.webp";
+const bubbleAntiStatic = "/bubble-wrap-anti-static125cm.webp";
 
 export interface Product {
   id: string;

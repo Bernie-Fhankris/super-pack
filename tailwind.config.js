@@ -2,6 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         primary: {
@@ -15,6 +22,11 @@ module.exports = {
           700: '#ed2d26',
           800: '#580017',
           900: '#33000C',
+        },
+        surface: {
+          dark: '#231F20',
+          soft: '#F1F3F5',
+          mid: '#505050',
         },
         blue: {
           50: '#FFE5EB',
@@ -45,10 +57,25 @@ module.exports = {
         sans: ['Lato', 'Helvetica Neue', 'Arial Black', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        card: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        card: '0 6px 12px rgba(0, 0, 0, 0.12), 0 10px 24px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 14px 28px rgba(0, 0, 0, 0.18), 0 18px 40px rgba(0, 0, 0, 0.16)',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss/plugin')(function ({ matchVariant }) {
+      // Tablet-only responsive variant
+      matchVariant(
+        'tab',
+        () => '@media (min-width: 768px) and (max-width: 1023px)'
+      );
+
+      // Additional coarse-pointer variant scoped to tablets
+      matchVariant(
+        'tab-touch',
+        () =>
+          '@media (pointer: coarse) and (min-width: 768px) and (max-width: 1023px)'
+      );
+    }),
+  ],
 }; 

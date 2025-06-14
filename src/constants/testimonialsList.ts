@@ -1,4 +1,4 @@
-import placeholderImage from '../assets/logo-original.png';
+const placeholderImage = "/logo-original.png";
 
 export interface Testimonial {
   id: string;

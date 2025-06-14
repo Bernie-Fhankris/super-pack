@@ -15,7 +15,7 @@ export const NAV_LINKS: NavLink[] = [
     path: '/',
   },
   {
-    id: 'products',
+    id: 'produk',
     title: 'Produk',
     path: '/produk',
     hasDropdown: true,
@@ -26,22 +26,22 @@ export const NAV_LINKS: NavLink[] = [
     })),
   },
   {
-    id: 'gallery',
+    id: 'galeri',
     title: 'Galeri',
     path: '/galeri',
   },
   {
-    id: 'testimonials',
+    id: 'testimoni',
     title: 'Testimoni',
     path: '/testimoni',
   },
   {
-    id: 'about',
+    id: 'tentang',
     title: 'Tentang Kami',
     path: '/tentang',
   },
   {
-    id: 'contact',
+    id: 'kontak',
     title: 'Kontak',
     path: '/kontak',
   },

@@ -1,4 +1,4 @@
-import placeholderLogo from '../assets/superpack-logo.png';
+const placeholderLogo = "/superpack-logo.png";
 
 interface Partner {
   id: string;

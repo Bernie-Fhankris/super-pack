@@ -1,7 +1,4 @@
-import bubbleBening from '../assets/bubble-wrap-bening125cm.webp';
-import bubbleAntiStatic from '../assets/bubble-wrap-anti-static125cm.webp';
-import bubbleHitam from '../assets/bubble-wrap-hitam125cm.webp';
-
+// Types for about section
 interface AboutPoint {
   id: string;
   title: string;
@@ -9,6 +6,7 @@ interface AboutPoint {
   icon: string;
 }
 
+// List of points shown in AboutSection
 export const ABOUT_POINTS: AboutPoint[] = [
   {
     id: 'point-1',
@@ -49,8 +47,9 @@ export const ABOUT_CONTENT = {
   ],
 };
 
+// Image paths (served from /public)
 export const ABOUT_IMAGES = {
-  main: bubbleBening,
-  secondary1: bubbleAntiStatic,
-  secondary2: bubbleHitam,
+  main: "/bubble-wrap-bening125cm.webp",
+  secondary1: "/bubble-wrap-anti-static125cm.webp",
+  secondary2: "/bubble-wrap-hitam125cm.webp",
 };

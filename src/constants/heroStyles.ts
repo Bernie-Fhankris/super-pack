@@ -11,5 +11,5 @@ export const HERO_LAYOUT = {
   `,
   SLIDE: `
     w-full h-full flex-shrink-0
-  `
+  `,
 };

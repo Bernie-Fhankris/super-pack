@@ -17,7 +17,7 @@ export const HERO_FONT = {
     MARGIN: 'mb-5'
   },
   CTA: {
-    BASE: 'inline-flex bg-primary-600 hover:bg-primary-700 text-white text-base transition-colors shadow',
+    BASE: 'inline-flex bg-[#ed1c24] hover:bg-[#c9151b] text-white text-base transition-colors shadow',
     MOBILE: 'w-full mx-auto py-3 px-6 rounded-md font-bold uppercase text-center',
     DESKTOP: 'w-auto px-6 py-3 rounded-md font-bold uppercase whitespace-nowrap self-start mx-0 flex-shrink-0 flex-grow-0'
   },

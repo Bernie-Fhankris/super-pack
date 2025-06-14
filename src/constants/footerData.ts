@@ -20,7 +20,7 @@ export const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: 'Tentang Kami',
     links: [
-      { id: 'about', text: 'Profil Perusahaan', url: '/tentang' },
+      { id: 'about', text: 'Profil Perusahaan', url: '/tentang#profil-perusahaan' },
       { id: 'mission', text: 'Visi & Misi', url: '/tentang#visi-misi' },
       { id: 'csr', text: 'CSR', url: '/tentang#csr' },
       { id: 'career', text: 'Karir', url: '/tentang#karir' },
