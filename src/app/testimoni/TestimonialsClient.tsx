@@ -10,8 +10,7 @@ export default function TestimonialsClient() {
         <header className="pt-8 md:pt-10 mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-[#ed1c24] mb-4">Testimoni Pelanggan</h1>
           <p className="text-[#212125] max-w-3xl text-lg">
-            Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami. Kepuasan pelanggan
-            adalah prioritas utama kami.
+            Kami percaya bahwa kualitas kemasan terbaik dinilai langsung dari pengalaman penggunanya. Inilah sebagian tanggapan yang kami terima.
           </p>
         </header>
 

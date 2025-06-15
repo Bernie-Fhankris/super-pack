@@ -52,10 +52,10 @@ const TestimonialsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 md:mb-8">
           <div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#ed1c24] mb-2 md:mb-3">
-              Apa Kata Mereka
+              Testimoni Pelanggan
             </h2>
             <p className="text-base md:text-lg text-[#212125] max-w-2xl">
-              Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami.
+              Kami percaya bahwa kualitas kemasan terbaik dinilai langsung dari pengalaman penggunanya. Inilah sebagian tanggapan yang kami terima.
             </p>
           </div>
           <div className="flex space-x-2 mt-3 md:mt-0">
@@ -64,14 +64,14 @@ const TestimonialsSection: React.FC = () => {
               className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors"
               aria-label="Previous testimonials"
             >
-              <ArrowLeft className="h-6 w-6 text-[#ed1c24]" />
+              <ArrowLeft className="h-6 w-6 text-[#ed1c24]" aria-hidden="true" />
             </button>
             <button
               onClick={goNext}
               className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors"
               aria-label="Next testimonials"
             >
-              <ArrowRight className="h-6 w-6 text-[#ed1c24]" />
+              <ArrowRight className="h-6 w-6 text-[#ed1c24]" aria-hidden="true" />
             </button>
           </div>
         </div>

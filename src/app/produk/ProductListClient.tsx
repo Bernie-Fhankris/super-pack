@@ -28,11 +28,12 @@ export default function ProductListClient() {
   return (
     <main className="pb-16 md:pb-24 bg-gray-50">
       <div className="max-w-[1260px] mx-auto px-4 md:px-8">
-        <header id="top" className="pt-8 md:pt-10 mb-8 md:mb-12 scroll-mt-24">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#ed1c24] mb-3">Produk Kami</h1>
+        <header id="produk-top" className="pt-8 md:pt-10 mb-8 md:mb-12 scroll-mt-24">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#ed1c24] mb-3">Produk Bubble Wrap Super Pack</h1>
           <p className="text-[#212125] max-w-3xl text-base md:text-lg">
-            Temukan berbagai solusi kemasan berkualitas tinggi dari Super Pack. Setiap produk dirancang dengan
-            memperhatikan detail, kualitas, dan keberlanjutan untuk memenuhi kebutuhan spesifik bisnis Anda.
+            Super Pack menyediakan bubble wrap <strong>roll</strong> dan lembaran dalam berbagai ukuran. Bubble wrap roll adalah solusi kemasan plastik bergelembung yang ideal untuk perlindungan barang saat pengiriman, tersedia dalam pilihan lebar dan panjang sesuai kebutuhan.
+            <br />
+            Temukan berbagai jenis bubble wrap berkualitas tinggi langsung dari produsen. Tersedia varian bening, hitam, anti-statis, dan food grade — cocok untuk kebutuhan logistik, UMKM, dan industri.
           </p>
         </header>
 
@@ -44,11 +45,14 @@ export default function ProductListClient() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {products.map((p) => (
-                <article key={p.id} className="bg-white rounded-xl overflow-hidden shadow-md flex flex-col">
+                <article 
+                  key={p.id} 
+                  className={`bg-white rounded-xl overflow-hidden shadow-md flex flex-col ${p.category === 'Coming Soon' ? 'opacity-50 cursor-default coming-soon' : ''}`}
+                >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={p.imageUrl}
-                      alt={p.name}
+                      alt={p.imageAlt ?? p.name}
                       fill
                       sizes="(max-width:768px)100vw, (max-width:1280px)50vw,33vw"
                       className="object-cover transition-transform duration-500 hover:scale-105"
@@ -70,10 +74,9 @@ export default function ProductListClient() {
         ))}
 
         <section className="bg-gray-50 rounded-xl p-6 md:p-8 shadow-sm">
-          <h2 className="text-xl md:text-2xl font-bold text-[#ed1c24] mb-3">Butuh Kemasan Kustom?</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-[#ed1c24] mb-3">Belum Menemukan Produk yang Anda Butuhkan?</h2>
           <p className="text-[#212125] mb-6 text-base md:text-lg">
-            Kami menyediakan layanan desain dan produksi kemasan kustom sesuai kebutuhan spesifik bisnis Anda.
-            Hubungi tim kami untuk konsultasi dan penawaran.
+            Kami terus menambah varian produk bubble wrap dan kemasan pelindung lainnya sesuai permintaan pasar. Silakan hubungi tim kami untuk informasi stok terbaru atau rekomendasi produk yang sesuai kebutuhan bisnis Anda.
           </p>
           <Link href="/kontak" className="inline-block bg-[#ed1c24] hover:bg-[#c9151b] text-white font-bold uppercase py-3 px-6 rounded-md shadow-md">
             Hubungi Kami

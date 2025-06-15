@@ -19,6 +19,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
             className={`h-4 w-4 md:h-5 md:w-5 ${
               i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
             }`}
+            aria-hidden="true"
           />
         ))}
       </div>

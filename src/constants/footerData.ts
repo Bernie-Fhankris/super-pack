@@ -1,3 +1,5 @@
+import { CONTACT_INFO } from './contactInfo';
+
 interface FooterSection {
   title: string;
   links: {
@@ -30,16 +32,16 @@ export const FOOTER_SECTIONS: FooterSection[] = [
 
 export const FOOTER_COMPANY = {
   name: 'Super Pack',
-  description: 'Menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.',
-  address: 'Jl. Industri Raya No. 45, Jakarta Timur 13920',
-  phone: '+62 21 4600 8888',
-  email: 'info@superpack.co.id',
+  description: 'Super Pack adalah produsen bubble wrap dan solusi kemasan pelindung untuk berbagai kebutuhan bisnis di Indonesia. Fokus pada kualitas, kepraktisan, dan pengiriman cepat.',
+  address: CONTACT_INFO.address,
+  phone: CONTACT_INFO.phone,
+  email: CONTACT_INFO.email,
   copyright: '© 2025 Super Pack. All rights reserved.',
 };
 
 export const FOOTER_SOCIAL = [
-  { id: 'instagram', name: 'Instagram', url: 'https://instagram.com/superpack.id', icon: 'instagram' },
-  { id: 'facebook', name: 'Facebook', url: 'https://facebook.com/SuperPackIndonesia', icon: 'facebook' },
-  { id: 'linkedin', name: 'LinkedIn', url: 'https://linkedin.com/company/super-pack', icon: 'linkedin' },
-  { id: 'youtube', name: 'YouTube', url: 'https://youtube.com/c/SuperPackID', icon: 'youtube' },
+  { id: 'instagram', name: 'Instagram', url: 'https://instagram.com/', icon: 'instagram' },
+  { id: 'facebook', name: 'Facebook', url: 'https://facebook.com/', icon: 'facebook' },
+  { id: 'linkedin', name: 'LinkedIn', url: 'https://linkedin.com/', icon: 'linkedin' },
+  { id: 'youtube', name: 'YouTube', url: 'https://youtube.com/', icon: 'youtube' },
 ];

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { X, ChevronDown } from 'lucide-react';
 import { NAV_LINKS } from '@/constants/navLinks';
@@ -15,11 +15,28 @@ const Drawer: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { handleNavigation } = useNavigation({ onNavigate: closeDrawer });
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setMounted(true);
     return () => setMounted(false);
   }, []);
+
+  useEffect(() => {
+    if (isDrawerOpen) {
+      closeBtnRef.current?.focus();
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeDrawer();
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [isDrawerOpen, closeDrawer]);
 
   const handleOverlay = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) closeDrawer();
@@ -50,7 +67,7 @@ const Drawer: React.FC = () => {
       <div className={drawerCls} role="dialog" aria-modal="true" aria-label="Navigation menu">
         <div className="flex items-center justify-between p-4 shadow-sm">
           <h2 className="text-lg font-semibold text-[#ed1c24]">Menu</h2>
-          <button onClick={closeDrawer} className="p-2 text-gray-400 hover:text-gray-600" aria-label="Close menu">
+          <button ref={closeBtnRef} onClick={closeDrawer} className="p-2 text-gray-400 hover:text-gray-600 focus:outline-[#ed1c24]" aria-label="Close menu">
             <X className="h-6 w-6" />
           </button>
         </div>

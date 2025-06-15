@@ -44,7 +44,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ item }) => {
           isHovered ? "opacity-100" : "opacity-0"
         }`}
       >
-        <Maximize className="text-white mb-2 h-8 w-8" />
+        <Maximize className="text-white mb-2 h-8 w-8" aria-hidden="true" />
         <h3 className="text-white text-center font-bold text-lg">{item.title}</h3>
         <span className="text-white text-sm bg-[#ed1c24] px-3 py-1 rounded-full mt-2">
           {displayCategory}

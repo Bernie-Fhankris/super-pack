@@ -18,7 +18,7 @@ const PartnersSection: React.FC = () => {
             <div key={partner.id} className="flex items-center justify-center">
               <Image
                 src={partner.logoUrl}
-                alt={partner.name}
+                alt={`Logo ${partner.name}`}
                 height={80}
                 width={140}
                 className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"

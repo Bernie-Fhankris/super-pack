@@ -13,8 +13,7 @@ const FeaturedProductsSection: React.FC = () => {
               Produk Unggulan Kami
             </h2>
             <p className="text-[#212125] max-w-2xl text-lg">
-              Temukan berbagai solusi kemasan berkualitas tinggi untuk kebutuhan bisnis Anda. Setiap produk
-              dirancang dengan memperhatikan detail, kualitas, dan keberlanjutan.
+              Temukan berbagai jenis bubble wrap berkualitas tinggi langsung dari produsen. Tersedia varian bening, hitam, anti-statis, dan food grade dalam berbagai ukuran — cocok untuk kebutuhan logistik, UMKM, dan industri.
             </p>
           </div>
           <Link
@@ -22,7 +21,7 @@ const FeaturedProductsSection: React.FC = () => {
             className="inline-flex items-center text-[#ed1c24] font-bold uppercase hover:text-[#c9151b] mt-4 md:mt-0 group"
           >
             Lihat Semua Produk
-            <ArrowRight className="ml-2 h-5 w-5 text-[#ed1c24] transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 h-5 w-5 text-[#ed1c24] transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </div>
 

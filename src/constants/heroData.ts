@@ -2,9 +2,6 @@ import { HeroSlideData, ValidationError } from "@/types/hero";
 
 // Image paths located in /public
 const heroMobileImage = "/mobile-herosection.webp";
-const heroSlide1Desktop = "/herosection-slide1desktop(960x530).webp";
-const heroSlide1Tablet = "/herosection-slide1tablet(1024x700).webp";
-const heroSlide1Retina = "/herosection-slide1retina4k(1920X1060).webp";
 
 // Simple validation helper
 const validateHeroSlide = (slide: HeroSlideData): void => {
@@ -31,40 +28,42 @@ const validateHeroSlide = (slide: HeroSlideData): void => {
 export const HERO_SLIDES: HeroSlideData[] = [
   {
     id: "slide-1",
-    headline: "Solusi Kemasan Premium untuk Bisnis Anda",
+    headline: "Produsen Bubble Wrap Premium Sejak 2024",
     description:
       "Kemasan premium dengan desain modern dan berkualitas tinggi untuk produk bisnis Anda. Tersedia dalam berbagai ukuran dan finishing premium.",
-    ctaText: "Profil Perusahaan",
+    ctaText: "Profil Perusahaan ⬇︎",
     ctaLink: "/download/Portfolio - PT Sunjaya Makmur Sukses.pdf",
-    imageDesktop: heroSlide1Desktop,
-    imageTablet: heroSlide1Tablet,
-    imageRetina: heroSlide1Retina,
+    imageDesktop: "/SLIDER(1)desktop(960X530).webp",
+    imageTablet: "/SLIDER(1)tablet(1024X700).webp",
+    imageRetina: "/SLIDER(1)retina4k(1920X1060).webp",
     imageMobile: heroMobileImage,
-    imageAlt:
-      "Kemasan premium dengan desain modern dan berkualitas tinggi untuk produk bisnis",
+    imageAlt: "Proses produksi bubble wrap Super Pack di pabrik Bekasi.",
   },
   {
     id: "slide-2",
-    headline: "Kemasan Ramah Lingkungan",
+    headline: "Produk Bubble Wrap Lengkap & Harga Grosir",
     description:
-      "Kemasan ramah lingkungan dengan material daur ulang dan biodegradable. Solusi kemasan yang sustainable untuk masa depan yang lebih baik.",
+      "Economy · Standard · Premium — pilih varian sesuai kebutuhan bisnis Anda.",
     ctaText: "Lihat Produk",
     ctaLink: "/produk",
-    imageDesktop: heroSlide1Desktop,
-    imageMobile: heroMobileImage,
-    imageAlt:
-      "Kemasan ramah lingkungan dengan material daur ulang dan biodegradable",
+    imageDesktop: "/SLIDER(2)desktop(960X530).webp",
+    imageTablet: "/SLIDER(2)tablet(1024X700).webp",
+    imageRetina: "/SLIDER(2)retina4k(1920X1060).webp",
+    imageMobile: "/SLIDER(2)mobile(768X1024).webp",
+    imageAlt: "Varian economy, standard, dan premium bubble wrap Super Pack.",
   },
   {
     id: "slide-3",
-    headline: "Solusi Kemasan Kustom",
+    headline: "Distributor Bubble Wrap Terpercaya di Jakarta",
     description:
-      "Kemasan kustom dengan desain unik dan personalisasi. Sesuaikan kemasan Anda dengan identitas brand dan kebutuhan spesifik.",
-    ctaText: "Pelajari Lebih Lanjut",
-    ctaLink: "/tentang",
-    imageDesktop: heroSlide1Desktop,
-    imageMobile: heroMobileImage,
-    imageAlt: "Kemasan kustom dengan desain unik dan personalisasi",
+      "Dapatkan pasokan bubble wrap terbaik langsung dari distributor resmi kami. Jaringan distribusi luas, pengiriman cepat, dan stok selalu tersedia.",
+    ctaText: "Hubungi Distributor Kami",
+    ctaLink: "/kontak",
+    imageDesktop: "/SLIDER(3)desktop(960X530).webp",
+    imageTablet: "/SLIDER(3)tablet(1024X700).webp",
+    imageRetina: "/SLIDER(3)retina4k(1920X1060).webp",
+    imageMobile: "/SLIDER(3)mobile(768X1024).webp",
+    imageAlt: "Gudang dan distribusi bubble wrap Super Pack di Jakarta – stok lengkap, pengiriman cepat.",
   },
 ].filter((slide) => {
   try {

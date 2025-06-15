@@ -21,7 +21,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isStandalone = false })
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-[#ed1c24] mb-4">Kontak Kami</h1>
             <p className="text-[#212125] max-w-xl text-lg">
-              Punya pertanyaan atau ingin berdiskusi tentang kebutuhan kemasan Anda? Tim kami siap membantu Anda.
+              Punya pertanyaan seputar produk bubble wrap atau ingin berkonsultasi langsung mengenai kebutuhan kemasan usaha Anda?
+              Tim Super Pack siap membantu Anda memberikan solusi terbaik.
             </p>
           </div>
         </div>
@@ -35,14 +36,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isStandalone = false })
               <h3 className="text-2xl font-bold text-[#ed1c24] mb-6">Informasi Kontak</h3>
               <div className="space-y-6">
                 <div className="flex">
-                  <MapPin className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" />
+                  <MapPin className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <h4 className="font-bold text-[#ed1c24] mb-1">Alamat</h4>
                     <p className="text-[#212125] text-lg">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
                 <div className="flex">
-                  <Phone className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" />
+                  <Phone className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <h4 className="font-bold text-[#ed1c24] mb-1">Telepon</h4>
                     <p className="text-[#212125] text-lg">{CONTACT_INFO.phone}</p>
@@ -50,14 +51,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isStandalone = false })
                   </div>
                 </div>
                 <div className="flex">
-                  <Mail className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" />
+                  <Mail className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <h4 className="font-bold text-[#ed1c24] mb-1">Email</h4>
                     <p className="text-[#212125] text-lg">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
                 <div className="flex">
-                  <Clock className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" />
+                  <Clock className="h-6 w-6 text-[#ed1c24] mr-4 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <h4 className="font-bold text-[#ed1c24] mb-1">Jam Operasional</h4>
                     <p className="text-[#212125] text-lg">{CONTACT_INFO.operationalHours}</p>
@@ -66,7 +67,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isStandalone = false })
               </div>
               <div className="mt-8">
                 <a
-                  href={`https://wa.me/${CONTACT_INFO.whatsapp.replace(/\D/g, '')}`}
+                  href={`https://wa.me/62${CONTACT_INFO.whatsapp.replace(/\D/g, '').substring(1)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex w-full justify-center items-center px-4 py-3 text-base font-bold uppercase text-white bg-[#231F20] hover:bg-red-600 rounded-md transition-colors"
@@ -80,7 +81,36 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isStandalone = false })
           <div className="lg:w-2/3 lg:pl-12 mt-12 lg:mt-0">
             <div className="bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow p-6 lg:p-8">
               <h3 className="text-2xl font-bold text-[#ed1c24] mb-6">Kirim Pesan</h3>
-              <form onSubmit={(e)=>{e.preventDefault();alert('Pesan terkirim! (Mock)');}}>
+              <form onSubmit={(e) => {
+                e.preventDefault();
+
+                const form = e.currentTarget as HTMLFormElement;
+                const formData = new FormData(form);
+
+                const name = formData.get('name') || '';
+                const email = formData.get('email') || '';
+                const phone = formData.get('phone') || '';
+                const company = formData.get('company') || '';
+                const subject = formData.get('subject') || '';
+                const message = formData.get('message') || '';
+
+                let whatsappMessage = "Permohonan Kontak dari Website Super Pack\n\n";
+                whatsappMessage += `Nama Lengkap: ${name}\n`;
+                whatsappMessage += `Email: ${email}\n`;
+                whatsappMessage += `Nomor Telepon: ${phone}\n`;
+                if (company) {
+                  whatsappMessage += `Perusahaan: ${company}\n`;
+                }
+                whatsappMessage += `Subjek: ${subject}\n`;
+                whatsappMessage += `Pesan:\n${message}\n\n`;
+                whatsappMessage += `--- \n(Dikirim otomatis dari superpack.id)`;
+
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                const whatsappNumber = `62${CONTACT_INFO.whatsapp.replace(/\D/g, '').substring(1)}`;
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                window.open(whatsappUrl, '_blank');
+              }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   {CONTACT_FORM_FIELDS.slice(0,4).map(field=> (
                     <div key={field.id}>

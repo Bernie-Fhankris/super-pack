@@ -12,11 +12,10 @@ const GallerySection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#ed1c24] mb-4">
-              Galeri Produk Kami
+              Galeri Produk
             </h2>
             <p className="text-[#212125] max-w-2xl text-lg">
-              Jelajahi berbagai produk kemasan berkualitas tinggi yang telah kami buat untuk pelanggan kami
-              dari berbagai industri.
+              Jelajahi dokumentasi visual dari produk bubble wrap Super Pack — mulai dari roll bening dan hitam hingga varian premium. Lihat langsung kualitas bahan dan hasil pengemasan dari pelanggan kami di berbagai sektor industri.
             </p>
           </div>
           <Link
@@ -24,7 +23,7 @@ const GallerySection: React.FC = () => {
             className="inline-flex items-center text-[#ed1c24] font-bold uppercase hover:text-[#c9151b] mt-4 md:mt-0 group"
           >
             Lihat Semua Galeri
-            <ArrowRight className="ml-2 h-5 w-5 text-[#ed1c24] transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 h-5 w-5 text-[#ed1c24] transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </div>
 

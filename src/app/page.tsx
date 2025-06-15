@@ -11,6 +11,9 @@ export const metadata = {
   title: "Super Pack | Premium Packaging Solutions",
   description:
     "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
+  alternates: {
+    canonical: "https://superpack.id/",
+  },
 };
 
 export default function Home() {

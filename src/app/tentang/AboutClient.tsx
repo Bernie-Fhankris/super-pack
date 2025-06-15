@@ -21,8 +21,7 @@ export default function AboutClient() {
         <header id="profil-perusahaan" className="pt-8 md:pt-10 mb-12 scroll-mt-24">
           <h1 className="text-4xl md:text-5xl font-bold text-[#ed1c24] mb-4">Tentang Super Pack</h1>
           <p className="text-[#212125] max-w-3xl text-lg">
-            Kami adalah perusahaan yang berdedikasi untuk menyediakan solusi kemasan premium yang inovatif, fungsional,
-            dan ramah lingkungan.
+            Super Pack adalah produsen kemasan modern yang berfokus pada solusi bubble wrap berkualitas tinggi untuk berbagai kebutuhan industri dan UMKM di Indonesia. Kami menghadirkan produk yang fungsional, aman, dan ramah lingkungan — langsung dari fasilitas produksi milik kami sendiri.
           </p>
         </header>
 
@@ -38,8 +37,8 @@ export default function AboutClient() {
           </div>
           {/* Content */}
           <div className="lg:w-7/12">
-            <h2 className="text-3xl font-bold text-[#ed1c24] mb-6">Sejarah Kami</h2>
-            <p className="text-[#212125] mb-8 leading-relaxed text-lg">{ABOUT_CONTENT.history}</p>
+            <h2 className="text-3xl font-bold text-[#ed1c24] mb-6">Siapa Kami</h2>
+            <p className="text-[#212125] mb-8 leading-relaxed text-lg">Didirikan pada tahun 2023, Super Pack hadir sebagai bagian dari upaya menyediakan kemasan pelindung yang tidak hanya kuat dan praktis, tapi juga memperhatikan efisiensi logistik dan keberlanjutan lingkungan. Berbasis di kawasan industri Bekasi, kami melayani berbagai sektor mulai dari ekspor, logistik, makanan, hingga retail lokal.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               {ABOUT_POINTS.map((p) => (
                 <div key={p.id} className="flex">
@@ -63,7 +62,11 @@ export default function AboutClient() {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-[#ed1c24] mb-4">Misi Kami</h2>
-              <p className="text-[#212125] leading-relaxed text-lg">{ABOUT_CONTENT.mission}</p>
+              <ul className="list-disc pl-6 space-y-2 text-[#212125] text-lg">
+                {ABOUT_CONTENT.mission.split('\n').map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -85,18 +88,16 @@ export default function AboutClient() {
 
         {/* CSR */}
         <section id="csr" className="mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-bold text-[#ed1c24] mb-6">Corporate Social Responsibility</h2>
+          <h2 className="text-2xl font-bold text-[#ed1c24] mb-6">Tanggung Jawab Sosial (CSR)</h2>
           <div className="bg-white p-8 rounded-xl shadow-md">
             <p className="text-[#212125] mb-4 text-lg">
-              Sebagai perusahaan yang bertanggung jawab, Super Pack berkomitmen untuk memberikan kontribusi positif
-              kepada masyarakat dan lingkungan. Program CSR kami meliputi:
+              Super Pack percaya bahwa bisnis harus memberi dampak baik. Program CSR kami berfokus pada:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-[#212125] text-lg">
-              <li>Penggunaan material ramah lingkungan dan dapat didaur ulang</li>
-              <li>Program reboisasi di kawasan industri</li>
-              <li>Kerjasama dengan komunitas pengrajin lokal</li>
-              <li>Pendidikan lingkungan untuk sekolah-sekolah</li>
-              <li>Dukungan untuk UMKM dalam pengembangan kemasan</li>
+              <li>Penggunaan bahan baku ramah lingkungan</li>
+              <li>Kolaborasi dengan komunitas lokal dalam produksi kemasan</li>
+              <li>Edukasi publik tentang pengemasan berkelanjutan</li>
+              <li>Dukungan kemasan bagi pelaku UMKM dan ekspedisi lokal</li>
             </ul>
           </div>
         </section>
@@ -106,15 +107,18 @@ export default function AboutClient() {
           <h2 className="text-2xl font-bold text-[#ed1c24] mb-6">Karir di Super Pack</h2>
           <div className="bg-white p-8 rounded-xl shadow-md">
             <p className="text-[#212125] mb-4 text-lg">
-              Kami selalu mencari individu berbakat dan berdedikasi untuk bergabung dengan tim kami. Super Pack menawarkan
-              lingkungan kerja yang dinamis, inklusif, dan berorientasi pada pertumbuhan.
+              Kami membuka kesempatan bagi Anda yang ingin tumbuh bersama industri kemasan modern. Super Pack menawarkan lingkungan kerja yang:
             </p>
+            <ul className="list-disc pl-6 space-y-2 text-[#212125] text-lg mb-6">
+              <li>Inklusif dan kolaboratif</li>
+              <li>Fokus pada pengembangan diri</li>
+              <li>Berorientasi pada hasil dan pertumbuhan nyata</li>
+            </ul>
             <p className="text-[#212125] mb-6 text-lg">
-              Jika Anda tertarik untuk menjadi bagian dari perjalanan kami dalam revolusi industri kemasan, kirimkan CV
-              Anda kepada kami.
+              📩 Kirimkan CV dan surat pengantar Anda ke: <Link href="mailto:ptsunjayamakmursukses@gmail.com" className="text-[#ed1c24] hover:underline">ptsunjayamakmursukses@gmail.com</Link>
             </p>
             <Link href="/kontak" className="inline-block bg-[#ed1c24] hover:bg-[#c9151b] text-white font-bold uppercase py-3 px-6 rounded-md shadow-md">
-              Lihat Lowongan Tersedia
+              Lihat Lowongan Tersedia →
             </Link>
           </div>
         </section>

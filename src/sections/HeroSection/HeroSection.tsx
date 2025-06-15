@@ -277,6 +277,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className={`${HERO_LAYOUT.SECTION} pb-0 bg-white`} aria-label="Hero Section" role="region">
+      <h1 className="sr-only">Bubble Wrap Terbaik di Indonesia</h1>
       {/* Main Container */}
       <div
         ref={sliderRef}
@@ -390,16 +391,16 @@ const HeroSection: React.FC = () => {
         <button
           onClick={prevSlide}
           className="pointer-events-auto absolute left-0 md:left-4 lg:left-4 top-1/2 -translate-y-1/2 z-40 w-[72px] h-[72px] md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center transition-colors"
-          aria-label="Previous Slide"
+          aria-label="Previous slide"
         >
-          <ChevronLeft className="h-9 w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#ed1c24]" />
+          <ChevronLeft className="h-9 w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#ed1c24]" aria-hidden="true" />
         </button>
         <button
           onClick={nextSlide}
           className="pointer-events-auto absolute right-0 md:right-4 lg:right-4 top-1/2 -translate-y-1/2 z-40 w-[72px] h-[72px] md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center transition-colors"
-          aria-label="Next Slide"
+          aria-label="Next slide"
         >
-          <ChevronRight className="h-9 w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#ed1c24]" />
+          <ChevronRight className="h-9 w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#ed1c24]" aria-hidden="true" />
         </button>
       </div>
     </section>

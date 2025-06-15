@@ -25,7 +25,7 @@ export default function ProductGalleryClient() {
         <header className="pt-8 md:pt-10 mb-8 md:mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-[#ed1c24] mb-4">Galeri Produk</h1>
           <p className="text-[#212125] max-w-2xl text-lg">
-            Jelajahi berbagai produk kemasan berkualitas tinggi yang telah kami buat untuk pelanggan kami dari berbagai industri.
+            Jelajahi dokumentasi visual dari produk bubble wrap Super Pack — mulai dari roll bening dan hitam hingga varian premium. Lihat langsung kualitas bahan dan hasil pengemasan dari pelanggan kami di berbagai sektor industri.
           </p>
         </header>
 

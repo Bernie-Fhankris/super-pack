@@ -18,11 +18,11 @@ const HeroSlide: React.FC<HeroSlideProps> = ({
         isMobile ? "justify-start items-start" : "md:justify-start md:items-start"
       }`}
     >
-      <h1
+      <h2
         className={`${HERO_FONT.HEADLINE.BASE} ${HERO_FONT.HEADLINE.MOBILE} ${HERO_FONT.HEADLINE.DESKTOP} ${HERO_FONT.HEADLINE.MARGIN} text-[#ed1c24]`}
       >
         {headline}
-      </h1>
+      </h2>
       <p
         className={`${HERO_FONT.DESCRIPTION.BASE} ${
           isMobile ? HERO_FONT.DESCRIPTION.MOBILE_ADJUSTED : HERO_FONT.DESCRIPTION.MOBILE
@@ -42,6 +42,7 @@ const HeroSlide: React.FC<HeroSlideProps> = ({
           onClick={(e) => {
             if (preventClick) e.preventDefault();
           }}
+          rel={isDownloadLink ? "noopener" : undefined}
           download={isDownloadLink ? true : undefined}
         >
           {ctaText}

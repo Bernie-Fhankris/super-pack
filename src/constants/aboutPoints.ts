@@ -35,15 +35,15 @@ export const ABOUT_POINTS: AboutPoint[] = [
 ];
 
 export const ABOUT_CONTENT = {
-  mission: 'Menyediakan solusi kemasan berkualitas premium yang tidak hanya memenuhi kebutuhan praktis tetapi juga meningkatkan nilai brand dan pengalaman pelanggan, sembari menjaga komitmen pada keberlanjutan lingkungan.',
-  vision: 'Menjadi pemimpin industri dalam inovasi kemasan yang menggabungkan desain kreatif, fungsionalitas unggul, dan praktik ramah lingkungan.',
+  mission: 'Menyediakan bubble wrap dan produk kemasan berkualitas premium dengan harga kompetitif\nMendukung pertumbuhan usaha kecil dan menengah dengan solusi kemasan siap pakai\nMembangun rantai pasok kemasan yang cepat dan terpercaya\nMenjaga standar ramah lingkungan dalam produksi dan distribusi',
+  vision: 'Menjadi mitra terpercaya dalam solusi kemasan pelindung yang mengedepankan kualitas, efisiensi, dan tanggung jawab lingkungan di seluruh Indonesia.',
   history: 'Super Pack didirikan pada tahun 2010 oleh sekelompok profesional yang memiliki visi untuk merevolusi industri kemasan di Indonesia. Berawal dari workshop kecil di Jakarta, kami kini telah berkembang menjadi produsen kemasan terkemuka dengan fasilitas produksi modern di beberapa kota besar.',
   values: [
-    'Kualitas dan keunggulan dalam setiap produk',
-    'Inovasi berkelanjutan dalam desain dan material',
-    'Tanggung jawab lingkungan dalam seluruh operasi',
-    'Kepuasan pelanggan sebagai prioritas utama',
-    'Integritas dan transparansi dalam berbisnis',
+    'Komitmen pada Kualitas – Produk diproduksi dengan material terbaik dan proses yang terstandar',
+    'Efisiensi & Ketepatan – Pengiriman cepat, respons cepat, stok siap',
+    'Keberlanjutan – Fokus pada bahan daur ulang dan pengurangan limbah',
+    'Transparansi – Informasi produk jelas dan proses kerja terbuka',
+    'Kepuasan Pelanggan – Setiap masukan dihargai sebagai bahan perbaikan',
   ],
 };
 

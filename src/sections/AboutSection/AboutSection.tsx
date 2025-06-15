@@ -50,14 +50,11 @@ const AboutSection: React.FC = () => {
 
           {/* Content */}
           <div className="lg:w-7/12">
-            <span className="text-gray-700 font-bold mb-2 block">Tentang Super Pack</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#ed1c24] mb-6">
-              Keunggulan Dalam Setiap Kemasan
+              Tentang Super Pack
             </h2>
             <p className="text-[#212125] mb-8 leading-relaxed text-lg">
-              Super Pack menyediakan solusi kemasan premium yang menggabungkan estetika, fungsionalitas, dan
-              keberlanjutan. Kami berkomitmen untuk menjadi mitra terpercaya bagi bisnis Anda dengan produk
-              berkualitas tinggi dan layanan yang memuaskan.
+              Super Pack adalah produsen kemasan modern yang berfokus pada solusi bubble wrap berkualitas tinggi untuk berbagai kebutuhan industri dan UMKM di Indonesia. Kami menghadirkan produk yang fungsional, aman, dan ramah lingkungan — langsung dari fasilitas produksi milik kami sendiri.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">

@@ -9,8 +9,8 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
     id: "all",
     label: "Semua Produk",
-    anchor: "top",
-    navPath: "/produk#top"
+    anchor: "produk-top",
+    navPath: "/produk#produk-top"
   },
   {
     id: "bubble-wrap-bening",
