@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { ABOUT_CONTENT, ABOUT_IMAGES, ABOUT_POINTS } from '@/constants/aboutPoints';
+import { ABOUT_CONTENT, ABOUT_IMAGES_PAGE, ABOUT_POINTS } from '@/constants/aboutPoints';
 import { Award, Leaf, Settings, Truck } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -30,9 +30,9 @@ export default function AboutClient() {
           {/* Images */}
           <div className="lg:w-5/12 relative">
             <div className="relative">
-              <Image src={ABOUT_IMAGES.main} alt="Facilities" width={600} height={400} className="w-full h-auto rounded-2xl shadow-xl object-cover" />
-              <Image src={ABOUT_IMAGES.secondary1} alt="Packaging" width={200} height={200} className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 md:-bottom-8 md:-right-8 w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 object-cover rounded-xl shadow-lg border-4 border-white" />
-              <Image src={ABOUT_IMAGES.secondary2} alt="Eco" width={160} height={160} className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-xl shadow-lg border-4 border-white" />
+              <Image src={ABOUT_IMAGES_PAGE.main} alt="Facilities" width={600} height={400} className="w-full h-auto rounded-2xl shadow-xl object-cover" />
+              <Image src={ABOUT_IMAGES_PAGE.secondary1} alt="Packaging" width={200} height={200} className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 md:-bottom-8 md:-right-8 w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 object-cover rounded-xl shadow-lg border-4 border-white" />
+              <Image src={ABOUT_IMAGES_PAGE.secondary2} alt="Eco" width={160} height={160} className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-xl shadow-lg border-4 border-white" />
             </div>
           </div>
           {/* Content */}

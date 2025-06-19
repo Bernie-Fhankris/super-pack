@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import Head from "next/head";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,6 +15,43 @@ export const metadata: Metadata = {
   title: "Super Pack | Premium Packaging Solutions",
   description:
     "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
+  alternates: {
+    canonical: "https://superpack.id/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: "https://superpack.id/",
+    title: "Super Pack | Premium Packaging Solutions",
+    description:
+      "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
+    siteName: "Super Pack",
+    images: [
+      {
+        url: "/superpack-logo.png",
+        width: 512,
+        height: 512,
+        alt: "Super Pack Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Super Pack | Premium Packaging Solutions",
+    description:
+      "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
+    images: ["/superpack-logo.png"],
+  },
+};
+
+export const themeColor = "#ffffff";
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -24,24 +61,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className="scroll-smooth">
-      <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              url: "https://superpack.id/",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://superpack.id/search?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
-            }),
-          }}
-        />
-      </Head>
       <body className={`${lato.className} antialiased pt-14 md:pt-16 bg-gray-50`}>
         {/* Skip Link for keyboard users */}
         <a
@@ -55,6 +74,52 @@ export default function RootLayout({
         <div id="main-content" tabIndex={-1} />
         {children}
         <Footer />
+        {/* Schema.org JSON-LD */}
+        <Script
+          id="ld-json-website"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              url: "https://superpack.id/",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://superpack.id/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        {/* Organization schema */}
+        <Script
+          id="ld-organization-home"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": "https://superpack.id/#organization",
+              name: "Super Pack",
+              url: "https://superpack.id/",
+              logo: "https://superpack.id/superpack-logo.png",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+62-821-8888-7061",
+                contactType: "customer service",
+                areaServed: "ID",
+                availableLanguage: ["id", "en"],
+              },
+              sameAs: [
+                "https://instagram.com/",
+                "https://facebook.com/",
+                "https://linkedin.com/",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

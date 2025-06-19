@@ -1,11 +1,24 @@
 import TestimonialsClient from './TestimonialsClient';
-import Head from 'next/head';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Testimoni Pelanggan | Super Pack',
   description: 'Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami.',
   alternates: {
     canonical: 'https://superpack.id/testimoni',
+  },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://superpack.id/testimoni',
+    title: 'Testimoni Pelanggan | Super Pack',
+    description: 'Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami.',
+    siteName: 'Super Pack',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Testimoni Pelanggan | Super Pack',
+    description: 'Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami.',
   },
 };
 
@@ -21,12 +34,12 @@ export default function TestimonialsPage() {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </Head>
+      <Script
+        id="ld-breadcrumb-testimoni"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <TestimonialsClient />
     </>
   );

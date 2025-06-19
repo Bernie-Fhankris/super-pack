@@ -10,8 +10,8 @@ interface FeaturedProductCardProps {
 
 const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({ product }) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-shadow transition-transform duration-300 group">
-      <div className="relative w-full h-60 md:h-64 overflow-hidden rounded-t-xl">
+    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-shadow transition-transform duration-300 group flex flex-col h-full">
+      <div className="relative w-full h-60 md:h-64 overflow-hidden rounded-t-xl flex-shrink-0">
         <Image
           src={product.imageUrl}
           alt={product.name}
@@ -22,10 +22,10 @@ const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({ product }) =>
         />
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl font-bold text-gray-700 mb-2">{product.name}</h3>
         <p className="text-[#212125] mb-4 text-lg">{product.description}</p>
-        <div className="flex justify-end items-center">
+        <div className="flex justify-end items-center mt-auto">
           {(() => {
             const anchor = PRODUCT_CATEGORIES.find(c => c.label === product.category)?.anchor || product.category.toLowerCase().replace(/\s+/g, '-');
             return (

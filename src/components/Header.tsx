@@ -9,6 +9,7 @@ import Drawer from '@/components/Drawer';
 import { DrawerProvider, useDrawerContext } from '@/contexts/DrawerContext';
 import { NAV_LINKS } from '@/constants/navLinks';
 import Link from 'next/link';
+import { CONTACT_INFO } from '@/constants/contactInfo';
 
 // -------------------------
 // Inner header that consumes DrawerContext
@@ -52,9 +53,11 @@ const HeaderContent: React.FC = () => {
 
         {/* Contact button (mobile) */}
         <Link
-          href="/kontak"
+          href={`https://wa.me/62${CONTACT_INFO.whatsapp.replace(/\D/g, '').substring(1)}?text=Halo%20Super%20Pack%2C%20saya%20ingin%20bertanya%20mengenai%20produk`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="md:hidden w-12 h-12 flex items-center justify-center rounded-lg text-[#F9FAFB] hover:bg-white/10 relative z-10"
-          aria-label="Hubungi Kami"
+          aria-label="Hubungi Kami via WhatsApp"
         >
           <Phone className="h-6 w-6" />
         </Link>
@@ -74,7 +77,12 @@ const HeaderContent: React.FC = () => {
 
         {/* Contact button (desktop) */}
         <div className="hidden md:block">
-          <Link href="/kontak" className="inline-flex items-center min-h-[32px] px-4 py-1 text-sm font-medium uppercase text-white bg-[#231F20] border border-white hover:bg-red-600 rounded-md transition-colors"> 
+          <Link
+            href={`https://wa.me/62${CONTACT_INFO.whatsapp.replace(/\D/g, '').substring(1)}?text=Halo%20Super%20Pack%2C%20saya%20ingin%20bertanya%20mengenai%20produk`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center min-h-[32px] px-4 py-1 text-sm font-medium uppercase text-white bg-[#231F20] border border-white hover:bg-red-600 rounded-md transition-colors"
+          > 
             <Phone size={14} className="mr-1.5" /> Hubungi Kami
           </Link>
         </div>

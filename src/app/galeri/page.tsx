@@ -1,12 +1,25 @@
 import ProductGalleryClient from './ProductGalleryClient';
 import { GALLERY_ITEMS } from '@/constants/galleryList';
-import Head from 'next/head';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Galeri Produk | Super Pack',
   description: 'Jelajahi galeri solusi kemasan berkualitas tinggi Super Pack untuk berbagai industri.',
   alternates: {
     canonical: 'https://superpack.id/galeri',
+  },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://superpack.id/galeri',
+    title: 'Galeri Produk | Super Pack',
+    description: 'Jelajahi galeri solusi kemasan berkualitas tinggi Super Pack untuk berbagai industri.',
+    siteName: 'Super Pack',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Galeri Produk | Super Pack',
+    description: 'Jelajahi galeri solusi kemasan berkualitas tinggi Super Pack untuk berbagai industri.',
   },
 };
 
@@ -33,16 +46,18 @@ export default function GalleryPage() {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </Head>
+      <Script
+        id="ld-gallery-images"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
+      />
+      <Script
+        id="ld-breadcrumb-gallery"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ProductGalleryClient />
     </>
   );

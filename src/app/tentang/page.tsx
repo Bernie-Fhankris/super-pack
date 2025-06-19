@@ -1,12 +1,25 @@
 import AboutClient from './AboutClient';
 import { CONTACT_INFO } from '@/constants/contactInfo';
-import Head from 'next/head';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Tentang Kami | Super Pack',
   description: 'Profil perusahaan, visi, misi, dan nilai Super Pack sebagai penyedia solusi kemasan premium.',
   alternates: {
     canonical: 'https://superpack.id/tentang',
+  },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://superpack.id/tentang',
+    title: 'Tentang Kami | Super Pack',
+    description: 'Profil perusahaan, visi, misi, dan nilai Super Pack sebagai penyedia solusi kemasan premium.',
+    siteName: 'Super Pack',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Tentang Kami | Super Pack',
+    description: 'Profil perusahaan, visi, misi, dan nilai Super Pack sebagai penyedia solusi kemasan premium.',
   },
 };
 
@@ -24,7 +37,7 @@ export default function AboutPage() {
         "@type": "Organization",
         "name": "Super Pack",
         "url": "https://superpack.id",
-        "logo": "https://superpack.id/logo.png", // Pastikan path ini sesuai dengan lokasi logo Anda
+        "logo": "https://superpack.id/superpack-logo.png",
         "foundingDate": "2023",
         "description": "Didirikan pada tahun 2023, Super Pack hadir sebagai bagian dari upaya menyediakan kemasan pelindung yang tidak hanya kuat dan praktis, tapi juga memperhatikan efisiensi logistik dan keberlanjutan lingkungan. Berbasis di kawasan industri Bekasi, kami melayani berbagai sektor mulai dari ekspor, logistik, makanan, hingga retail lokal.",
         "email": CONTACT_INFO.email,
@@ -37,9 +50,9 @@ export default function AboutPage() {
           "addressCountry": "ID"
         },
         "sameAs": [
-          "https://www.linkedin.com/", 
-          "https://instagram.com/", 
-          "https://www.facebook.com/"
+          "https://instagram.com/",
+          "https://facebook.com/",
+          "https://linkedin.com/"
         ]
       }
     ]
@@ -56,16 +69,18 @@ export default function AboutPage() {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </Head>
+      <Script
+        id="ld-about-graph"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <Script
+        id="ld-breadcrumb-about"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <AboutClient />
     </>
   );

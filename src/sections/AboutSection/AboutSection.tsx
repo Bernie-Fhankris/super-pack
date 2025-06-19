@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ABOUT_POINTS, ABOUT_IMAGES } from "@/constants/aboutPoints";
+import { ABOUT_POINTS, ABOUT_IMAGES_HOME } from "@/constants/aboutPoints";
 import { Award, Leaf, Settings, Truck } from "lucide-react";
 import React from "react";
 
@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
           <div className="lg:w-5/12 relative">
             <div className="relative">
               <Image
-                src={ABOUT_IMAGES.main}
+                src={ABOUT_IMAGES_HOME.main}
                 alt="Super Pack facility"
                 width={800}
                 height={600}
@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
               />
 
               <Image
-                src={ABOUT_IMAGES.secondary1}
+                src={ABOUT_IMAGES_HOME.secondary1}
                 alt="Packaging production"
                 width={160}
                 height={160}
@@ -39,7 +39,7 @@ const AboutSection: React.FC = () => {
               />
 
               <Image
-                src={ABOUT_IMAGES.secondary2}
+                src={ABOUT_IMAGES_HOME.secondary2}
                 alt="Eco-friendly materials"
                 width={128}
                 height={128}

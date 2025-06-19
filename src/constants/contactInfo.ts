@@ -5,7 +5,7 @@ export const CONTACT_INFO = {
   email: 'ptsunjayamakmursukses@gmail.com',
   website: 'superpack.id',
   operationalHours: 'Senin – Jumat, 08.00 – 17.00 WIB',
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!4v1749962610367!6m8!1m7!1sKO8sAkd_go0gMIRe0s1JTg!2m2!1d-6.143874804526527!2d106.7630407379121!3f212.01565594221466!4f1.8604268554996395!5f0.7820865974627469',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1983.451824078812!2d106.76133314461752!3d-6.14364298266701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1750314343268!5m2!1sen!2sus',
   socialMedia: {
     instagram: 'instagram.com',
     facebook: 'facebook.com',

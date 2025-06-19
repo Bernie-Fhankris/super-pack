@@ -49,7 +49,21 @@ export const ABOUT_CONTENT = {
 
 // Image paths (served from /public)
 export const ABOUT_IMAGES = {
+  // Deprecated – kept for backward compatibility
   main: "/bubble-wrap-bening125cm.webp",
   secondary1: "/bubble-wrap-anti-static125cm.webp",
   secondary2: "/bubble-wrap-hitam125cm.webp",
+};
+
+// --- New dedicated image sets ---
+export const ABOUT_IMAGES_HOME = {
+  main: "/Gambar-Utama-TentangKami-Beranda.webp",
+  secondary1: "/sudut-kanan-bawah-Beranda.webp",
+  secondary2: "/sudut-kiri-atas-Beranda.webp",
+};
+
+export const ABOUT_IMAGES_PAGE = {
+  main: "/Gambar-Utama-TentangKami-Halaman.webp",
+  secondary1: "/sudut-kanan-bawah-Halaman.webp",
+  secondary2: "/sudut-kiri-atas-Halaman.webp",
 };

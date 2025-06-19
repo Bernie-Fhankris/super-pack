@@ -1,6 +1,6 @@
 import ProductListClient from './ProductListClient';
 import { ALL_PRODUCTS } from '@/constants/featuredProducts';
-import Head from 'next/head';
+import Script from 'next/script';
 import slugify from 'slugify';
 
 export const metadata = {
@@ -8,6 +8,19 @@ export const metadata = {
   description: 'Jual Bubble Wrap Roll, lembaran, dan berbagai ukuran. Produk bubble wrap Super Pack tersedia untuk kebutuhan packing bisnis & pribadi. Harga grosir & eceran.',
   alternates: {
     canonical: 'https://superpack.id/produk',
+  },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://superpack.id/produk',
+    title: 'Bubble Wrap Roll & Varian – Super Pack',
+    description: 'Jual Bubble Wrap Roll, lembaran, dan berbagai ukuran. Produk bubble wrap Super Pack tersedia untuk kebutuhan packing bisnis & pribadi. Harga grosir & eceran.',
+    siteName: 'Super Pack',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Bubble Wrap Roll & Varian – Super Pack',
+    description: 'Jual Bubble Wrap Roll, lembaran, dan berbagai ukuran. Produk bubble wrap Super Pack tersedia untuk kebutuhan packing bisnis & pribadi. Harga grosir & eceran.',
   },
 };
 
@@ -26,9 +39,12 @@ export default function ProdukPage() {
       },
       "offers": {
         "@type": "Offer",
-        ...(product.category === 'Coming Soon' ? { price: "0" } : product.price !== undefined ? { price: product.price.toString() } : {}),
-        "priceCurrency": "IDR",
-        "availability": product.category === 'Coming Soon' ? "https://schema.org/PreOrder" : "https://schema.org/InStock",
+        ...(product.category !== 'Coming Soon' && product.price !== undefined
+            ? { price: product.price.toString(), priceCurrency: "IDR" }
+            : {}),
+        "availability": product.category === 'Coming Soon'
+          ? "https://schema.org/PreOrder"
+          : "https://schema.org/InStock",
         "url": `https://superpack.id/produk/${slugify(product.name, { lower: true, strict: true })}`
       }
     }))
@@ -55,16 +71,18 @@ export default function ProdukPage() {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </Head>
+      <Script
+        id="ld-product-graph"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <Script
+        id="ld-breadcrumb-product"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ProductListClient />
     </>
   );
