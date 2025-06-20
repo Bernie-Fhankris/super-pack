@@ -37,37 +37,25 @@ export default function ProdukPage() {
         "@type": "Brand",
         "name": "Super Pack"
       },
-      "offers": {
-        /*
-         * Google rich-result guidelines:
-         * – price & priceCurrency REQUIRED only when availability = InStock
-         * – For products without definite price (variable/coming-soon), we expose
-         *   availability = PreOrder and omit price fields.
-         */
-        ...((() => {
-          const hasPrice =
-            product.price !== undefined &&
-            product.price > 0 &&
-            product.category !== 'Coming Soon';
+      // Conditionally attach offers only when price available.
+      ...((() => {
+        const hasPrice =
+          product.price !== undefined &&
+          product.price > 0 &&
+          product.category !== 'Coming Soon';
 
-          if (hasPrice) {
-            return {
-              "@type": "Offer",
-              price: product.price!.toString(),
-              priceCurrency: "IDR",
-              availability: "https://schema.org/InStock",
-              url: `https://superpack.id/produk/${slugify(product.name, { lower: true, strict: true })}`,
-            } as const;
-          }
+        if (!hasPrice) return {}; // Skip offers entirely -> valid Product snippet without price.
 
-          // Variable price or coming soon → mark as PreOrder, no price fields.
-          return {
+        return {
+          "offers": {
             "@type": "Offer",
-            availability: "https://schema.org/PreOrder",
+            price: product.price!.toString(),
+            priceCurrency: "IDR",
+            availability: "https://schema.org/InStock",
             url: `https://superpack.id/produk/${slugify(product.name, { lower: true, strict: true })}`,
-          } as const;
-        })())
-      }
+          }
+        } as const;
+      })())
     }))
   };
 
