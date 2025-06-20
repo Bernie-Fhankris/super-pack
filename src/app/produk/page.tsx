@@ -44,14 +44,14 @@ export default function ProdukPage() {
           product.price > 0 &&
           product.category !== 'Coming Soon';
 
-        if (!hasPrice) return {}; // Skip offers entirely -> valid Product snippet without price.
-
         return {
           "offers": {
             "@type": "Offer",
-            price: product.price!.toString(),
+            price: (hasPrice ? product.price! : 0).toString(),
             priceCurrency: "IDR",
-            availability: "https://schema.org/InStock",
+            availability: hasPrice
+              ? "https://schema.org/InStock"
+              : "https://schema.org/PreOrder",
             url: `https://superpack.id/produk/${slugify(product.name, { lower: true, strict: true })}`,
           }
         } as const;
