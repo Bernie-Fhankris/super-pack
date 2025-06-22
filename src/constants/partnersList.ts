@@ -8,19 +8,19 @@ interface Partner {
 
 export const PARTNERS: Partner[] = [
   {
-    id: 'partner-1',
-    name: 'Eco Solutions',
-    logoUrl: placeholderLogo,
+    id: 'partner-vivo',
+    name: 'Vivo',
+    logoUrl: '/Terpercaya-Vivo.svg',
   },
   {
-    id: 'partner-2',
-    name: 'Green Pack',
-    logoUrl: placeholderLogo,
+    id: 'partner-honda',
+    name: 'Honda',
+    logoUrl: '/Terpercaya-Honda.svg',
   },
   {
-    id: 'partner-3',
-    name: 'Premium Box',
-    logoUrl: placeholderLogo,
+    id: 'partner-hs',
+    name: 'HS',
+    logoUrl: '/Terpercaya-HS.svg',
   },
   {
     id: 'partner-4',

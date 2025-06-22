@@ -21,7 +21,7 @@ const PartnersSection: React.FC = () => {
                 alt={`Logo ${partner.name}`}
                 height={80}
                 width={140}
-                className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-16 md:h-20 object-contain transition-all duration-300"
               />
             </div>
           ))}
