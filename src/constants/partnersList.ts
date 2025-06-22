@@ -23,13 +23,13 @@ export const PARTNERS: Partner[] = [
     logoUrl: '/Terpercaya-HS.svg',
   },
   {
-    id: 'partner-4',
-    name: 'Pack & Go',
-    logoUrl: placeholderLogo,
+    id: 'partner-jet',
+    name: 'Jet',
+    logoUrl: '/Terpercaya-Jet.svg',
   },
   {
-    id: 'partner-5',
-    name: 'Box Factory',
-    logoUrl: placeholderLogo,
+    id: 'partner-ciputra',
+    name: 'Ciputra',
+    logoUrl: '/Terpercaya-Ciputra.svg',
   },
 ];
