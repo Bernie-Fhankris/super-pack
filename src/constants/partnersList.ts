@@ -1,4 +1,4 @@
-const placeholderLogo = "/superpack-logo.png";
+// DELETE_LINE
 
 interface Partner {
   id: string;
