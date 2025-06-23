@@ -5,12 +5,12 @@ export const metadata = {
   title: 'Testimoni Pelanggan | Super Pack',
   description: 'Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami.',
   alternates: {
-    canonical: 'https://superpack.id/testimoni',
+    canonical: 'https://www.superpack.id/testimoni',
   },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://superpack.id/testimoni',
+    url: 'https://www.superpack.id/testimoni',
     title: 'Testimoni Pelanggan | Super Pack',
     description: 'Pendapat jujur dari para pelanggan yang telah menggunakan produk dan layanan kami.',
     siteName: 'Super Pack',
@@ -27,8 +27,8 @@ export default function TestimonialsPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position:1, name:"Beranda", item:"https://superpack.id/" },
-      { "@type": "ListItem", position:2, name:"Testimoni", item:"https://superpack.id/testimoni" },
+      { "@type": "ListItem", position:1, name:"Beranda", item:"https://www.superpack.id/" },
+      { "@type": "ListItem", position:2, name:"Testimoni", item:"https://www.superpack.id/testimoni" },
     ],
   };
 

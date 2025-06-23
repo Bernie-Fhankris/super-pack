@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
   alternates: {
-    canonical: "https://superpack.id/",
+    canonical: "https://www.superpack.id/",
   },
 };
 
@@ -21,13 +21,13 @@ export default function Home() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://superpack.id/#webpage",
-    url: "https://superpack.id/",
+    "@id": "https://www.superpack.id/#webpage",
+    url: "https://www.superpack.id/",
     name: "Super Pack | Premium Packaging Solutions",
     description:
       "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
     inLanguage: "id-ID",
-    isPartOf: { "@id": "https://superpack.id/#website" },
+    isPartOf: { "@id": "https://www.superpack.id/#website" },
   };
 
   return (

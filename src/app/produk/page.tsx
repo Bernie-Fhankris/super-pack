@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Bubble Wrap Roll & Varian – Super Pack',
   description: 'Jual Bubble Wrap Roll, lembaran, dan berbagai ukuran. Produk bubble wrap Super Pack tersedia untuk kebutuhan packing bisnis & pribadi. Harga grosir & eceran.',
   alternates: {
-    canonical: 'https://superpack.id/produk',
+    canonical: 'https://www.superpack.id/produk',
   },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://superpack.id/produk',
+    url: 'https://www.superpack.id/produk',
     title: 'Bubble Wrap Roll & Varian – Super Pack',
     description: 'Jual Bubble Wrap Roll, lembaran, dan berbagai ukuran. Produk bubble wrap Super Pack tersedia untuk kebutuhan packing bisnis & pribadi. Harga grosir & eceran.',
     siteName: 'Super Pack',
@@ -31,7 +31,7 @@ export default function ProdukPage() {
       "@type": "Product",
       "name": product.name,
       "sku": `SP-${product.id.toUpperCase()}`,
-      "image": product.imageUrl ? `https://superpack.id${product.imageUrl}` : undefined,
+      "image": product.imageUrl ? `https://www.superpack.id${product.imageUrl}` : undefined,
       "description": product.description || "Produk kemasan dari Super Pack.",
       "brand": {
         "@type": "Brand",
@@ -52,7 +52,7 @@ export default function ProdukPage() {
             availability: hasPrice
               ? "https://schema.org/InStock"
               : "https://schema.org/PreOrder",
-            url: `https://superpack.id/produk/${slugify(product.name, { lower: true, strict: true })}`,
+            url: `https://www.superpack.id/produk/${slugify(product.name, { lower: true, strict: true })}`,
           }
         } as const;
       })())
@@ -67,13 +67,13 @@ export default function ProdukPage() {
         "@type": "ListItem",
         position: 1,
         name: "Beranda",
-        item: "https://superpack.id/",
+        item: "https://www.superpack.id/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Produk",
-        item: "https://superpack.id/produk",
+        item: "https://www.superpack.id/produk",
       },
     ],
   };

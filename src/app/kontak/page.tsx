@@ -5,12 +5,12 @@ export const metadata = {
   title: 'Kontak | Super Pack',
   description: 'Hubungi Super Pack untuk konsultasi solusi kemasan premium.',
   alternates: {
-    canonical: 'https://superpack.id/kontak',
+    canonical: 'https://www.superpack.id/kontak',
   },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://superpack.id/kontak',
+    url: 'https://www.superpack.id/kontak',
     title: 'Kontak | Super Pack',
     description: 'Hubungi Super Pack untuk konsultasi solusi kemasan premium.',
     siteName: 'Super Pack',
@@ -27,8 +27,8 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position:1, name:"Beranda", item:"https://superpack.id/" },
-      { "@type": "ListItem", position:2, name:"Kontak", item:"https://superpack.id/kontak" },
+      { "@type": "ListItem", position:1, name:"Beranda", item:"https://www.superpack.id/" },
+      { "@type": "ListItem", position:2, name:"Kontak", item:"https://www.superpack.id/kontak" },
     ],
   };
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://superpack.id/#organization",
+            "@id": "https://www.superpack.id/#organization",
             contactPoint: [
               {
                 "@type": "ContactPoint",

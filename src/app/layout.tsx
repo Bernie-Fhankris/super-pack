@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
   alternates: {
-    canonical: "https://superpack.id/",
+    canonical: "https://www.superpack.id/",
   },
   robots: {
     index: true,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://superpack.id/",
+    url: "https://www.superpack.id/",
     title: "Super Pack | Premium Packaging Solutions",
     description:
       "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
     images: ["/superpack-logo.png"],
   },
-  metadataBase: new URL("https://superpack.id"),
+  metadataBase: new URL("https://www.superpack.id"),
 };
 
 export const themeColor = "#ffffff";
@@ -84,10 +84,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              url: "https://superpack.id/",
+              url: "https://www.superpack.id/",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://superpack.id/search?q={search_term_string}",
+                target: "https://www.superpack.id/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
@@ -102,10 +102,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "@id": "https://superpack.id/#organization",
+              "@id": "https://www.superpack.id/#organization",
               name: "Super Pack",
-              url: "https://superpack.id/",
-              logo: "https://superpack.id/superpack-logo.png",
+              url: "https://www.superpack.id/",
+              logo: "https://www.superpack.id/superpack-logo.png",
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+62-821-8888-7061",

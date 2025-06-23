@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Tentang Kami | Super Pack',
   description: 'Profil perusahaan, visi, misi, dan nilai Super Pack sebagai penyedia solusi kemasan premium.',
   alternates: {
-    canonical: 'https://superpack.id/tentang',
+    canonical: 'https://www.superpack.id/tentang',
   },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://superpack.id/tentang',
+    url: 'https://www.superpack.id/tentang',
     title: 'Tentang Kami | Super Pack',
     description: 'Profil perusahaan, visi, misi, dan nilai Super Pack sebagai penyedia solusi kemasan premium.',
     siteName: 'Super Pack',
@@ -30,14 +30,14 @@ export default function AboutPage() {
       {
         "@type": "AboutPage",
         "name": "Tentang Super Pack",
-        "url": "https://superpack.id/tentang",
+        "url": "https://www.superpack.id/tentang",
         "description": "Super Pack adalah produsen kemasan modern yang berfokus pada solusi bubble wrap berkualitas tinggi untuk berbagai kebutuhan industri dan UMKM di Indonesia. Kami menghadirkan produk yang fungsional, aman, dan ramah lingkungan — langsung dari fasilitas produksi milik kami sendiri."
       },
       {
         "@type": "Organization",
         "name": "Super Pack",
-        "url": "https://superpack.id",
-        "logo": "https://superpack.id/superpack-logo.png",
+        "url": "https://www.superpack.id",
+        "logo": "https://www.superpack.id/superpack-logo.png",
         "foundingDate": "2023",
         "description": "Didirikan pada tahun 2023, Super Pack hadir sebagai bagian dari upaya menyediakan kemasan pelindung yang tidak hanya kuat dan praktis, tapi juga memperhatikan efisiensi logistik dan keberlanjutan lingkungan. Berbasis di kawasan industri Bekasi, kami melayani berbagai sektor mulai dari ekspor, logistik, makanan, hingga retail lokal.",
         "email": CONTACT_INFO.email,
@@ -62,8 +62,8 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position:1, name:"Beranda", item:"https://superpack.id/" },
-      { "@type": "ListItem", position:2, name:"Tentang", item:"https://superpack.id/tentang" },
+      { "@type": "ListItem", position:1, name:"Beranda", item:"https://www.superpack.id/" },
+      { "@type": "ListItem", position:2, name:"Tentang", item:"https://www.superpack.id/tentang" },
     ],
   };
 

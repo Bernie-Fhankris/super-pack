@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Galeri Produk | Super Pack',
   description: 'Jelajahi galeri solusi kemasan berkualitas tinggi Super Pack untuk berbagai industri.',
   alternates: {
-    canonical: 'https://superpack.id/galeri',
+    canonical: 'https://www.superpack.id/galeri',
   },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://superpack.id/galeri',
+    url: 'https://www.superpack.id/galeri',
     title: 'Galeri Produk | Super Pack',
     description: 'Jelajahi galeri solusi kemasan berkualitas tinggi Super Pack untuk berbagai industri.',
     siteName: 'Super Pack',
@@ -28,7 +28,7 @@ export default function GalleryPage() {
     "@context": "https://schema.org",
     "@graph": GALLERY_ITEMS.map((item) => ({
       "@type": "ImageObject",
-      "contentUrl": item.imageUrl ? `https://superpack.id${item.imageUrl}` : undefined,
+      "contentUrl": item.imageUrl ? `https://www.superpack.id${item.imageUrl}` : undefined,
       "name": item.title || "Gambar Galeri Super Pack",
       "caption": item.title || "Gambar Galeri Super Pack",
       "description": item.title || "Gambar produk dan hasil pengemasan dari Super Pack.",
@@ -39,8 +39,8 @@ export default function GalleryPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position:1, name:"Beranda", item:"https://superpack.id/" },
-      { "@type": "ListItem", position:2, name:"Galeri", item:"https://superpack.id/galeri" },
+      { "@type": "ListItem", position:1, name:"Beranda", item:"https://www.superpack.id/" },
+      { "@type": "ListItem", position:2, name:"Galeri", item:"https://www.superpack.id/galeri" },
     ]
   };
 
