@@ -45,6 +45,7 @@ export const metadata: Metadata = {
       "Super Pack menyediakan solusi kemasan premium yang inovatif, fungsional, dan ramah lingkungan untuk berbagai kebutuhan bisnis.",
     images: ["/superpack-logo.png"],
   },
+  metadataBase: new URL("https://superpack.id"),
 };
 
 export const themeColor = "#ffffff";
